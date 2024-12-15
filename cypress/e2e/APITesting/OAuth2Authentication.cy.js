@@ -29,6 +29,7 @@ describe("OAuth2", () => {
         code: "8d3e8caac86fad208f2c",
       },
     }).then((response) => {
+      //access_token=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&scope=&token_type=bearer
       expect(response.status).to.eq(200);
       const params = response.body.split("&");
       accessToken = params[0].split("=")[1];

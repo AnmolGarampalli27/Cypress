@@ -28,7 +28,7 @@ describe("Authentication", () => {
     });
   });
 
-  const token = "";
+  const token = "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";
   it("Bearer Token Auth", () => {
     cy.request({
       method: "GET",
