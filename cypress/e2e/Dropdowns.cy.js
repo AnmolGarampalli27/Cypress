@@ -47,6 +47,25 @@ it("Handling dynamic dropdown", () => {
     cy.get("[name='q']").type("Cypress Automation");
     // Adding text to the search box
     // suggestions are displayed
+
+    cy.get("div.erkvQe").each(($el, index, $list) => {
+        // if($el.text() === "Cypress Automation - Google Search"){
+        //     $el.click();
+        // }
+
+
+        cy.wrap($el).click();
+        // Add any additional actions you want to perform on each suggestion
+        // For example, you can validate the suggestion text
+        cy.wrap($el).should('contain.text', 'Cypress Automation');
+        // Navigate back to the search results page if needed
+        cy.go('back');
+        // This has to be taken care after completing the course
+    });
+    // validating the selected suggestion
+
+
+
 })
 
 })
